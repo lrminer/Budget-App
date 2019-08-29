@@ -42,5 +42,9 @@ module.exports = function (app) {
         });
     });
 
-
-}
+    app.post('api/budgets', function(req,res) {
+        db.Budget.create(req.body).then(function(dbBudget){
+            res.json(dbBudget);
+        });
+    });
+};
