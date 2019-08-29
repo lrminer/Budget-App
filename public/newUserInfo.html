@@ -20,12 +20,14 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <form>
-                <input type="text" class="form-control" placeholder="Username">
-                <input type="text" class="form-control" placeholder="Password">
-                <input type="text" class="form-control" placeholder="Age">
-                <input type="text" class="form-control" placeholder="Location">
-                <input type="text" class="form-control" placeholder="Income">
+            <form method="POST" id="create-new-user-form" action="/api/users">
+                <h2>Create New User</h2>
+                <input type="text" class="form-control" placeholder="Username" name="username" id="input-username">
+                <input type="text" class="form-control" placeholder="Password" name="password" id="input-password">
+                <input type="text" class="form-control" placeholder="Age" name="age" id="input-age">
+                <input type="text" class="form-control" placeholder="Location" name="location" id="input-location">
+                <input type="text" class="form-control" placeholder="Income" name="income" id="input-income">
+                <input type="button" value="Create my user">
             </form>
 
         </div>
