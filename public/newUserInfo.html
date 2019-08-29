@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< Updated upstream
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Green</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
+
 <nav class="navbar navbar-light bg-success">
     <a href="" class="navbar-brand mb-0 h1 text-white">
         <img src="./Assets/Icons/circled-g.png" alt="circled-g">Green
@@ -24,30 +20,15 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Username">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Password">
-                    <br>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Age">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Location">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Income">
-                    </div>
-                </div>
+            <form method="POST" id="create-new-user-form" action="/api/users">
+                <h2>Create New User</h2>
+                <input type="text" class="form-control" placeholder="Username" name="username" id="input-username">
+                <input type="text" class="form-control" placeholder="Password" name="password" id="input-password">
+                <input type="text" class="form-control" placeholder="Age" name="age" id="input-age">
+                <input type="text" class="form-control" placeholder="Location" name="location" id="input-location">
+                <input type="text" class="form-control" placeholder="Income" name="income" id="input-income">
+                <input type="button" value="Create my user">
             </form>
-
-
-
-
-
-
-    
 
         </div>
     </div>
@@ -56,78 +37,15 @@
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
 </body>
 
 </html>
-=======
-     
-    <title>Document</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-
-</head>
-<body>
-
-  
-    <div class="container">
-
-        <div class="row">
-
-                <div id="text1">Budget App</div>
-            
-        </div>
-    
-    </div>    
-
-    <div class="container">
-
-        <div class="row">
-        
-            <form>
-                <div class="form-group">
-                    <label for="userName">User Name</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="userPassword">Password</label>
-                    <input type="password" class="form-control" id="userPassword"/> 
-                </div>
-                <div class="form-group">
-                    <label for="userAge">Age</label>
-                    <input type="text" class="form-control" id="userAge">
-                </div>
-                <div class="form-group">
-                        <label for="userLocation">Location</label>
-                        <input type="text" class="form-control" id="userLocation">
-                </div>
-                <div class="form-group">
-                        <label for="userIncome">Income</label>
-                        <input type="text" class="form-control" id="userIncome">
-                </div>
-
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
-
-
-            </form>
-    
-
-        </div>
-
-    </div>    
-
-    
-
-</body>
-</html>
->>>>>>> Stashed changes
