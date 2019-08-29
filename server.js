@@ -1,33 +1,23 @@
-/////////// SERVER.JS ---- THIS FILE IS THE STARTING POINT FOR OUR REPO ///////////////
+var express = require("express");
+var path = require("path");
 
-// Dependencies
-const express = require('express');
+var app = express();
+var PORT = process.env.PORT || 3000;
+app.use(express.static("public"))
 
-// SETS UP EXPRESS APP
-const app = express();
-const PORT = process.env.PORT || 8080;
-
-// REQUIRE MODELS FOR SYNCING
-const db = require('./models');
-
-// MIDDLEWARE
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// STATIC DIR
-app.use(express.static('public'));
+// ---------------ROUTES-----------
+// require("./routes/index.js")(app, path);
+// require("./routes/users.js")(app, path);
 
-// ROUTES
-require('./routes/api-routes')(app);
-require('./routes/html-routes')(app);
+// ---------------MODELS-----------
+var db = require("./models");
 
-// SYNCING sequelize MODELS AND THEN STARTS LISTENING
-db.sequelize.sync({
-    force: true
-}).then(function () {
+// ---------------------------------
+db.sequelize.sync({ force: true }).then(function () {
     app.listen(PORT, function () {
-        console.log("App listening on PORT " + PORT + "\nhttp://localhost:" + PORT);
-    })
-})
+        console.log("App listening on PORT " + PORT);
+    });
+});

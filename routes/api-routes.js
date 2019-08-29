@@ -3,7 +3,7 @@ const db = require('../models');
 module.exports = function (app) {
     // Used for looking at all users
     app.get('api/users/', function (req, res) {
-        db.User.findAll({}).then(function (dbUsers) {
+        db.Users.findAll({}).then(function (dbUsers) {
             res.json(dbUsers);
         });
     });
@@ -15,22 +15,25 @@ module.exports = function (app) {
             }
         }).then(function (dbUsers) {
             res.json(dbUsers);
+            console.log(dbBudgets)
+
         });
     });
     // Used for looking at all budgets
     app.get('api/budgets/', function (req, res) {
-        db.Budget.findAll({}).then(function (dbBudgets) {
+        db.Budgets.findAll({}).then(function (dbBudgets) {
             res.json(dbBudgets);
+            console.log(dbBudgets)
         });
     });
 
     // Used for looking at all budgets for a particular user
-    app.get('api/budgets/category/user_id=:user_id', function (req,res) {
+    app.get('api/budgets/category/user_id=:user_id', function (req, res) {
         db.Budget.findAll({
             where: {
                 user_id: req.params.user_id
             }
-        }).then(function(dbBudgets){
+        }).then(function (dbBudgets) {
             res.json(dbBudgets);
         });
     });
@@ -42,13 +45,13 @@ module.exports = function (app) {
         });
     });
 
-    app.post('api/budgets', function(req,res) {
-        db.Budget.create(req.body).then(function(dbBudget){
+    app.post('api/budgets', function (req, res) {
+        db.Budget.create(req.body).then(function (dbBudget) {
             res.json(dbBudget);
         });
     });
-    app.post('api/users', function(req,res) {
-        db.User.create(req.body).then(function(dbUser){
+    app.post('api/users', function (req, res) {
+        db.User.create(req.body).then(function (dbUser) {
             res.json(dbUser);
         });
     });
