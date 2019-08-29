@@ -6,7 +6,6 @@ $(document).ready(function () {
         const alcohol = $('#input-alcohol').val();
         const grocery = $('#input-grocery').val();
         const dineOut = $('#input-dineOut').val();
-        const alcohol = $('#input-alcohol').val();
         const housing = $('#input-housing').val();
         const apparelAndServices = $('#input-apparelAndServices').val();
         const transportation = $('#input-transportation').val();
@@ -24,7 +23,6 @@ $(document).ready(function () {
             alcohol: alcohol,
             grocery: grocery,
             dineOut: dineOut,
-            alcohol: alcohol,
             housing: housing,
             apparelAndServices: apparelAndServices,
             transportation: transportation,
