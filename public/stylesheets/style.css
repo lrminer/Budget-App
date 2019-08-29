@@ -1,8 +1,10 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.navbar-text {
+    text-align: left;
 }
 
-a {
-  color: #00B7FF;
+.button {
+    border-radius: 60%;
+    background-color: #4CAF50;
+    text-align: center;
+    font-size: 80pt;
 }
