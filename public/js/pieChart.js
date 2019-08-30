@@ -22,6 +22,7 @@ $(window).on("load", function () {
         // console.log(budgetData)
         // getUsers()
         // .then(drawChart)
+        
         function drawChart(all_data) {
             console.log(all_data);
             let grocery = 0.07
