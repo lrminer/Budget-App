@@ -7,4 +7,24 @@
     background-color: #4CAF50;
     text-align: center;
     font-size: 80pt;
+
+}
+
+.table {
+    background-color: #4CAF50;
+    font: white;
+    text-align: center;
+
+}
+
+.row {
+    padding-top: 50px;
+}
+
+#newBudget {
+    border-right: 50px;
+}
+
+#compare {
+    border-left: 50px;
 }
