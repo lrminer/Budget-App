@@ -20,9 +20,15 @@ require('./routes/api-routes')(app);
 // ---------------MODELS-----------
 // var db = require("./models");
 
+// ---------------ROUTES-----------
+require("./routes/api-routes")(app, path);
+require("./routes/html-routes")(app, path);
+
+
 // ---------------------------------
-// db.sequelize.sync({ force: true }).then(function () {
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("App listening on PORT " + PORT);
+    });
 });
 // });
