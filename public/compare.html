@@ -16,26 +16,41 @@
 <body>
     <h1>Hello, world!</h1>
 
-    <div class="container">
+    <div class="container" id="header">
+
         <div class="row">
             <div class="col">
-                <form action="">
+                <!-- HEADER GOES HERE -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <form method="GET">
                     <h2>Query by....</h2>
-                    <select name="" id="">
-                        <option value="">Age</option>
-                        <option value="">State</option>
-                        <option value="">Income</option>
+                    <select name="" id="typeOfQuery">
+                        <option value="age">Age</option>
+                        <option value="state">State</option>
+                        <option value="income">Income</option>
                     </select>
-                    <input type="button" value="Submit">
+                    <input type="text" name="range" id="input-range" value="">
+                    <input type="button" value="Submit" id="submit-button">
                 </form>
             </div>
         </div>
+
         <div class="row" id="display">
-            
+
             <!-- Use jQuery to append columns here with data (horizontally even).... 
 
                 or use jQuery to append div.row>div.col (to make them vertically stacked) -->
-                
+
+        </div>
+
+        <div class="row" id="footer">
+            <div class="col">
+                <!-- FOOTER GOES HERE -->
+            </div>
         </div>
     </div>
 
@@ -49,6 +64,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="./js/compare.js"></script>
 </body>
 
 </html>

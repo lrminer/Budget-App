@@ -23,12 +23,12 @@ module.exports = function (app) {
     app.get('api/budgets/', function (req, res) {
         db.Budget.findAll({}).then(function (dbBudgets) {
             res.json(dbBudgets);
-            console.log(dbBudgets)
+            console.log(dbBudgets);
         });
     });
 
     // Used for looking at all budgets for a particular user
-    app.get('api/budgets/category/user_id=:user_id', function (req, res) {
+    app.get('api/budgets/category/user_id/:user_id', function (req, res) {
         db.Budget.findAll({
             where: {
                 user_id: req.params.user_id
@@ -38,8 +38,29 @@ module.exports = function (app) {
         });
     });
 
-    // Used for looking at all budgets in a certain age
-    app.get('api/budgets/category/age=:age', function (req, res) {
+    // Used for looking at all budgets in a certain age 
+    // (CURRENTLY THIS WORKS FOR A MAXIMUM AGE BUT WE WILL MAKE IT WORK WITH TWO PARAMS, AGE_MIN AND AGE_MAX)
+    app.get('api/budgets/category/age/:age', function (req, res) {
+        db.Budget.findAll({
+            where: {
+                age: req.params.age
+            }
+        }).then(function (dbBudgets) {
+            res.json(dbBudgets);
+        });
+    });
+
+
+    // Used for looking at all budgets in a certain state
+    app.get('api/budgets/category/state/:state', function (req, res) {
+        db.Budget.findAll({}).then(function (dbBudgets) {
+            res.json(dbBudgets);
+        });
+    });
+
+
+    // Used for looking at all budgets in a certain income range
+    app.get('api/budgets/category/income/:income', function (req, res) {
         db.Budget.findAll({}).then(function (dbBudgets) {
             res.json(dbBudgets);
         });
