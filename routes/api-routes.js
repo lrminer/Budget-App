@@ -15,7 +15,7 @@ module.exports = function (app) {
             }
         }).then(function (dbUsers) {
             res.json(dbUsers);
-            console.log(dbBudgets)
+            console.log(dbBudgets);
 
         });
     });

@@ -3,13 +3,17 @@ $('#submit-button').on('click', function () {
 
     const range = $('#input-range').val();
 
-//    const url = '/api/budgets/category/' + typeOfQuery + '/' + range;
+    //    const url = '/api/budgets/category/' + typeOfQuery + '/' + range;
 
     const url = '/api/budgets/category/' + typeOfQuery + '/' + range;
 
-    getComparisonData(url);
+    // getComparisonData(url);
+
     console.log(url);
+
+
 });
+
 
 function getComparisonData(url) {
     $.ajax({
