@@ -2,7 +2,9 @@ const db = require('../models');
 
 module.exports = function (app) {
     // Used for looking at all users
+
     app.get('/api/users', function (req, res) {
+
         db.User.findAll({}).then(function (dbUsers) {
             res.json(dbUsers);
         });
@@ -20,7 +22,9 @@ module.exports = function (app) {
         });
     });
     // Used for looking at all budgets
+
     app.get('/api/budgets/', function (req, res) {
+
         db.Budget.findAll({}).then(function (dbBudgets) {
             res.json(dbBudgets);
             console.log(dbBudgets)

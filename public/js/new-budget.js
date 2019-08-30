@@ -3,27 +3,37 @@ $(document).ready(function () {
     $('#submit-btn').on('click', function (event) {
         event.preventDefault();
 
-        const category1 = $('#category1').val();
-        const category2 = $('#category2').val();
-        const category3 = $('#category3').val();
-        const category4 = $('#category4').val();
-        const category5 = $('#category5').val();
-        const category6 = $('#category6').val();
-        const category7 = $('#category7').val();
-        const category8 = $('#category8').val();
-        const category9 = $('#category9').val();
+        const alcohol = $('#input-alcohol').val();
+        const grocery = $('#input-grocery').val();
+        const dineOut = $('#input-dineOut').val();
+        const housing = $('#input-housing').val();
+        const apparelAndServices = $('#input-apparelAndServices').val();
+        const transportation = $('#input-transportation').val();
+        const healthCare = $('#input-healthCare').val();
+        const entertainment = $('#input-entertainment').val();
+        const personalCare = $('#input-personalCare').val();
+        const education = $('#input-education').val();
+        const miscellaneous = $('#input-miscellaneous').val();
+        const donations = $('#input-donations').val();
+        const insurance = $('#input-insurance').val();
+        
 
 
         const dataToSend = {
-            category1: category1,
-            category2: category2,
-            category3: category3,
-            category4: category4,
-            category5: category5,
-            category6: category6,
-            category7: category7,
-            category8: category8,
-            category9: category9,
+            alcohol: alcohol,
+            grocery: grocery,
+            dineOut: dineOut,
+            housing: housing,
+            apparelAndServices: apparelAndServices,
+            transportation: transportation,
+            healthCare: healthCare,
+            entertainment: entertainment,
+            personalCare: personalCare,
+            education: education,
+            miscellaneous: miscellaneous,
+            donations: donations,
+            insurance: insurance,
+            
         };
 
         $.post('/api/budgets', dataToSend, function () {
