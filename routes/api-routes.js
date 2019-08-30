@@ -2,13 +2,15 @@ const db = require('../models');
 
 module.exports = function (app) {
     // Used for looking at all users
-    app.get('api/users/', function (req, res) {
+
+    app.get('/api/users', function (req, res) {
+
         db.User.findAll({}).then(function (dbUsers) {
             res.json(dbUsers);
         });
     });
     // Used for looking at a particular user by their ID
-    app.get('api/users/:id', function (req, res) {
+    app.get('/api/users/:id', function (req, res) {
         db.User.findOne({
             where: {
                 id: req.params.id
@@ -20,7 +22,9 @@ module.exports = function (app) {
         });
     });
     // Used for looking at all budgets
-    app.get('api/budgets/', function (req, res) {
+
+    app.get('/api/budgets/', function (req, res) {
+
         db.Budget.findAll({}).then(function (dbBudgets) {
             res.json(dbBudgets);
             console.log(dbBudgets)
@@ -28,7 +32,7 @@ module.exports = function (app) {
     });
 
     // Used for looking at all budgets for a particular user
-    app.get('api/budgets/category/user_id=:user_id', function (req, res) {
+    app.get('/api/budgets/category/user_id=:user_id', function (req, res) {
         db.Budget.findAll({
             where: {
                 user_id: req.params.user_id
