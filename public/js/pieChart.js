@@ -24,22 +24,22 @@ $(window).on("load", function () {
     // .then(drawChart)
 
     function drawChart(all_data) {
-        // console.log(all_data);
-        let newUser = all_data[1][0]
-        console.log(newUser);
-        let grocery = parseInt(newUser.Grocery)
-        let dine_out = parseInt(newUser.Dine_Out)
-        let alcohol = parseInt(newUser.Alcohol)
-        let housing = parseInt(newUser.Housing)
-        let apparel = parseInt(newUser.Apparel)
-        let transportation = parseInt(newUser.Transportation)
-        let health = parseInt(newUser.Health)
-        let entertainment = parseInt(newUser.entertainment)
-        let personal_care = parseInt(newUser.Personal_care)
-        let education = parseInt(newUser.Education)
-        let miscellaneous = parseInt(newUser.Miscallaneous)
-        let donations = parseInt(newUser.Donations)
-        let insurance = parseInt(newUser.Insurance)
+        console.log(all_data);
+        let avgData = all_data[1];
+        console.log(avgData);
+        let grocery = parseInt(avgData.Grocery)
+        let dine_out = parseInt(avgData.Dine_Out)
+        let alcohol = parseInt(avgData.Alcohol)
+        let housing = parseInt(avgData.Housing)
+        let apparel = parseInt(avgData.Apparel)
+        let transportation = parseInt(avgData.Transportation)
+        let health = parseInt(avgData.Health)
+        let entertainment = parseInt(avgData.entertainment)
+        let personal_care = parseInt(avgData.Personal_care)
+        let education = parseInt(avgData.Education)
+        let miscellaneous = parseInt(avgData.Miscallaneous)
+        let donations = parseInt(avgData.Donations)
+        let insurance = parseInt(avgData.Insurance)
         
         // Create the data table.
         var data = new google.visualization.DataTable();
