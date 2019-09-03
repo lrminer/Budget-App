@@ -17,7 +17,11 @@
 
 }
 
-.row {
+#history {
+    padding-top: 50px;
+}
+
+#test {
     padding-top: 50px;
 }
 
