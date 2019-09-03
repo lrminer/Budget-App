@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('#submit-user').on('click', function (event) {
+    $('#submit-btn').on('click', function (event) {
         event.preventDefault();
 
         const username = $('#input-username').val();
@@ -21,7 +21,7 @@ $(document).ready(function () {
         
         console.log(dataToSend);
 
-        $.post('/api/budgets', dataToSend, function () {
+        $.post('/api/users', dataToSend, function () {
 
         }).then(function () {
             console.log(results);
