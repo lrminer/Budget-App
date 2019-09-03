@@ -15,31 +15,42 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Icons/favicon-32x32.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
-
+<nav class="navbar navbar-light bg-success">
+        <a href="" class="navbar-brand mb-0 h1 text-white">
+            <img src="./Assets/Icons/circled-g.png" alt="circled-g">Green
+        </a>
+</nav>
 <body>
-    <h1>Hello, world!</h1>
-
-    <div class="container">
+    <br>
+    <div class="container-float">
         <div class="row">   
             <div class="col">
-                <form action="">
-                    <h2>Query by....</h2>
-                    <select name="" id="">
-                        <option value="">Age</option>
-                        <option value="">State</option>
-                        <option value="">Income</option>
-                    </select>
-                    <input type="button" value="Submit">
-                </form>
-            </div>
-        </div>
-        <div class="row" id="display">
-            
-            <!-- Use jQuery to append columns here with data (horizontally even).... 
-
-                or use jQuery to append div.row>div.col (to make them vertically stacked) -->
+                <div class="table text-white success">test</div>
                 
+    </div>
+
+    <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Select</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" value='age' href="#">Age</a>
+                    <a class="dropdown-item" value='location' href="#">Location</a>
+
+                    <!-- <div role="separator" class="dropdown-divider"></div> -->
+                </div>
+
+            </div>
+
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <button id="search-btn">Submit</button>
         </div>
+
+
+    </div>
+
+
+    </div>
     </div>
 
     <!-- Optional JavaScript -->
