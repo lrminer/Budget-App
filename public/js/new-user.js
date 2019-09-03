@@ -10,7 +10,6 @@ $(document).ready(function () {
         const income = $('#input-income').val();
 
 
-
         const dataToSend = {
             username: username,
             password: password,
@@ -19,6 +18,8 @@ $(document).ready(function () {
             income: income,
 
         };
+        
+        console.log(dataToSend);
 
         $.post('/api/budgets', dataToSend, function () {
 
