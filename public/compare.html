@@ -22,36 +22,62 @@
 </nav>
 <body>
     <br>
+    <br>
     <div class="container-float">
         <div class="row">   
-            <div class="col">
-                <div class="table text-white success">test</div>
-                
-    </div>
-
-    <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Select</button>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Query
+                </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" value='age' href="#">Age</a>
-                    <a class="dropdown-item" value='location' href="#">Location</a>
-
-                    <!-- <div role="separator" class="dropdown-divider"></div> -->
+                    <a class="dropdown-item">Age</a>
+                    <a class="dropdown-item">Location</a>
                 </div>
-
             </div>
-
-            <input type="text" class="form-control" aria-label="Text input with dropdown button">
-            <button id="search-btn">Submit</button>
+            <div class="col-3">
+                <form class="form-inline">
+                    <div class="form-group mx-md-3 mb-2">
+                        <input type="query" class="form-control " id="queryResponse">
+                        <button type="submit" class="btn btn-success mb-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="col-3"> -->
+            <!-- <div class="col-3"></div> -->
+        </div>
+    </div>
+    <div class="container-float">
+            <div class="row" id= history>
+                <div class="col">
+                    <div class="table text-white">
+                        <thead>
+                            <th>
+                                <h2>My Comparison</h2>
+                            </th>
+                        </thead>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <table>
+                        <div id="chart_div"></div>
+                    </table>
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <table>
+                        "BAR CHART"
+                    </table>
+                </div>
+                <div class="col"></div>
+            </div>
         </div>
 
-
-    </div>
-
-
-    </div>
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -63,6 +89,39 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', { 'packages': ['corechart'] });
+</script>
+<script src="js/pieChart.js"> </script>
+
+
+
+<footer class="sticky page-footer font-large green darken-1 ">
+        <div class="container text-center align-middle">
+            <br>
+            <div class="row text-center align-middle footerrow">
+                <div class="col-3 ">
+                    <a href="./home.html">Dashboard</a>
+                </div>
+                <div class="col-3">
+                    <a href="./compare.html">Compare</a>
+                </div>
+                <div class="col-3" >
+                    <a href="./newBudget.html">Create New Budget</a>
+                </div>
+                <div class="col-3 ">
+                    <a href="./newUserInfo.html">Create New User</a>
+                </div>
+            </div>
+            <br>
+        </div>  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+  </footer>
 </body>
 
 </html>
