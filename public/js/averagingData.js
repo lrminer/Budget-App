@@ -1,31 +1,31 @@
 array = [{
-    alcohol : 100,
-    grocery : 500,
-    dineOut : 150,
-    housing : 1000,
-    apparelAndServices : 500,
-    transportation : 200,
-    healthCare : 250,
-    entertainment : 300,
-    personalCare : 60,
-    education : 1000,
-    miscellaneous : 40,
-    donations : 500,
-    insurance : 100
-},{
-    alcohol : 0,
-    grocery : 0,
-    dineOut : 0,
-    housing : 0,
-    apparelAndServices : 0,
-    transportation : 0,
-    healthCare : 0,
-    entertainment : 0,
-    personalCare : 0,
-    education : 0,
-    miscellaneous : 0,
-    donations : 0,
-    insurance : 0
+    alcohol: 100,
+    grocery: 500,
+    dineOut: 150,
+    housing: 1000,
+    apparelAndServices: 500,
+    transportation: 200,
+    healthCare: 250,
+    entertainment: 300,
+    personalCare: 60,
+    education: 1000,
+    miscellaneous: 40,
+    donations: 500,
+    insurance: 100
+}, {
+    alcohol: 0,
+    grocery: 0,
+    dineOut: 0,
+    housing: 0,
+    apparelAndServices: 0,
+    transportation: 0,
+    healthCare: 0,
+    entertainment: 0,
+    personalCare: 0,
+    education: 0,
+    miscellaneous: 0,
+    donations: 0,
+    insurance: 0
 }];
 
 
@@ -79,20 +79,21 @@ function averagingData(array) {
 
 
     data = {
-        alcoholTotal : alcoholTotal,
-        groceryTotal : groceryTotal,
-        dineOutTotal : dineOutTotal,
-        housingTotal : housingTotal,
-        apparelAndServicesTotal : apparelAndServicesTotal,
-        transportationTotal : transportationTotal,
-        healthCareTotal : healthCareTotal,
-        entertainmentTotal : entertainmentTotal,
-        personalCareTotal : personalCareTotal,
-        educationTotal : educationTotal,
-        miscellaneousTotal : miscellaneousTotal,
-        donationsTotal : donationsTotal,
-        insuranceTotal : insuranceTotal
+        Alcohol: alcoholTotal,
+        Grocery: groceryTotal,
+        Dine_Out: dineOutTotal,
+        Housing: housingTotal,
+        Apparel: apparelAndServicesTotal,
+        Transportation: transportationTotal,
+        Health: healthCareTotal,
+        entertainment: entertainmentTotal,
+        Personal_care: personalCareTotal,
+        Education: educationTotal,
+        Miscellaneous: miscellaneousTotal,
+        Donations: donationsTotal,
+        Insurance: insuranceTotal
     };
+    
     return data;
 }
 
