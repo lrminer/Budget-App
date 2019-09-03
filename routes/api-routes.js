@@ -1,14 +1,18 @@
 const db = require('../models');
 
+const averageData = require('../public/js/averagingData');
+
 module.exports = function (app) {
     // Used for looking at all users
 
-    app.get('/api/users', function (req, res) {
 
+
+    app.get('/api/users', function (req, res) {
         db.User.findAll({}).then(function (dbUsers) {
             res.json(dbUsers);
         });
     });
+
     // Used for looking at a particular user by their ID
     app.get('/api/users/:id', function (req, res) {
         db.User.findOne({
@@ -17,8 +21,7 @@ module.exports = function (app) {
             }
         }).then(function (dbUsers) {
             res.json(dbUsers);
-            console.log(dbBudgets)
-
+            
         });
     });
     // Used for looking at all budgets
@@ -26,8 +29,12 @@ module.exports = function (app) {
     app.get('/api/budgets/', function (req, res) {
 
         db.Budget.findAll({}).then(function (dbBudgets) {
-            res.json(dbBudgets);
-            console.log(dbBudgets)
+            
+            console.log(dbBudgets);
+            
+            console.log(averageData(dbBudgets));
+
+            res.json(averageData(dbBudgets));
         });
     });
 

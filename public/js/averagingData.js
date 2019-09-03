@@ -47,19 +47,20 @@ function averagingData(array) {
 
     array.forEach(function (item) {
         let budgetTotal = 0; //this may be unnecessary
-        alcoholTotal += item.alcohol;
-        groceryTotal += item.grocery;
-        dineOutTotal += item.dineOut;
-        housingTotal += item.housing;
-        apparelAndServicesTotal += item.apparelAndServices;
-        transportationTotal += item.transportation;
-        healthCareTotal += item.healthCare;
-        entertainmentTotal += item.entertainment;
-        personalCareTotal += item.personalCare;
-        educationTotal += item.education;
-        miscellaneousTotal += item.miscellaneous;
-        donationsTotal += item.donations;
-        insuranceTotal += item.insurance;
+
+        alcoholTotal += parseInt(item.Alcohol);
+        groceryTotal += parseInt(item.Grocery);
+        dineOutTotal += parseInt(item.Dine_Out);
+        housingTotal += parseInt(item.Housing);
+        apparelAndServicesTotal += parseInt(item.Apparel);
+        transportationTotal += parseInt(item.Transportation);
+        healthCareTotal += parseInt(item.Health_care);
+        entertainmentTotal += parseInt(item.entertainment);
+        personalCareTotal += parseInt(item.Personal_care);
+        educationTotal += parseInt(item.Education);
+        miscellaneousTotal += parseInt(item.Miscallaneous);
+        donationsTotal += parseInt(item.Donations);
+        insuranceTotal += parseInt(item.Insurance);
     });
 
     alcoholTotal /= array.length;
