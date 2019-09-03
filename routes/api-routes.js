@@ -21,15 +21,33 @@ module.exports = function (app) {
 
         });
     });
-    // Used for looking at all budgets
-
-    app.get('/api/budgets/', function (req, res) {
-
-        db.Budget.findAll({}).then(function (dbBudgets) {
-            res.json(dbBudgets);
-            console.log(dbBudgets)
+    // To query by whatever has been selected
+    // /api/budgets?location=GA&age=27
+    app.get("/api/budgets/", function (req, res) {
+        console.log(req.query);
+        db.Budget.findAll({
+            include: [{
+                model: db.User,
+                where: req.query
+            }]
+        }).then(budget => {
+            console.log(JSON.stringify(budget))
+            //   where: whereObj
+            // }).then(function(results) {
+            //   res.json(results);
+            // });
+            // res.end();
         });
     });
+    // Used for looking at all budgets
+
+    // app.get('/api/budgets/', function (req, res) {
+
+    //     db.Budget.findAll({}).then(function (dbBudgets) {
+    //         res.json(dbBudgets);
+    //         console.log(dbBudgets)
+    //     });
+    // });
 
     // Used for looking at all budgets for a particular user
     app.get('/api/budgets/category/user_id=:user_id', function (req, res) {
