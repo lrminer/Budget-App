@@ -3,24 +3,25 @@ $(document).ready(function () {
     $('#submit-btn').on('click', function (event) {
         event.preventDefault();
 
-        const username = $('#input-username').val();
-        const password = $('#input-password').val();
+        const firstName = $('#input-first-name').val();
+        const lastName = $('#input-last-name').val();
         const age = $('#input-age').val();
         const location = $('#input-location').val();
         const income = $('#input-income').val();
 
 
-
         const dataToSend = {
-            username: username,
-            password: password,
-            age: age,
-            location: location,
-            income: income,
+            firstName: firstName,
+            lastName: lastName,
+            Age: age,
+            Location: location,
+            Income: income,
 
         };
 
-        $.post('/api/budgets', dataToSend, function () {
+        console.log(dataToSend);
+
+        $.post('/api/users', dataToSend, function () {
 
         }).then(function () {
             console.log(results);

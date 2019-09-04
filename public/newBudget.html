@@ -5,42 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Green</title>
     <link rel="stylesheet" href="./sthoiylesheets/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Icons/favicon-32x32.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <nav class="navbar navbar-light bg-success">
-    <a href="" class="navbar-brand mb-0 h1 text-white">
+    <a href="./home.html" class="navbar-brand mb-0 h1 text-white">
         <img src="./Assets/Icons/circled-g.png" alt="circled-g">Green
     </a>
 </nav>
-
-<form action="">
-    <input type="text" name="grocery" id="input-grocery">
-    <input type="text" name="dineOut" id="input-dine"> 
-    <input type="text" name="alcohol" id="input-alcohol">
-    <input type="text" name="housing" id="input-housing">
-    <input type="text" name="apparelAndServices" id="input-apparelAndServices">
-    <input type="text" name="transportation" id="input-transportation">
-    <input type="text" name="healthCare" id="input-health">
-    <input type="text" name="entertainment" id="input-entertainment">
-    <input type="text" name="personalCare" id="input-personalCare">
-    <input type="text" name="education" id="input-education">
-    <input type="text" name="miscellaneous" id="input-miscellaneous">
-    <input type="text" name="donations" id="input-donations">
-    <input type="text" name="insurance" id="input-insurance">
-</form>
-
-
-
-
-
-
-
-
+<br>
+<div class="container">
+        <div class="container-float">
+                <div class="row" id= newBudget>
+                    <div class="col">
+                        <div class="table text-white">
+                            <thead>
+                                <th>
+                                    <h2>New Budget</h2>
+                                </th>
+                            </thead>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col">
+            <br>
+            <form class= "d-flex flex-column" action="">
+                <label>Grocery</label>
+                <input type="text" name="grocery" id="input-grocery">
+                <label>DineOut</label>
+                <input type="text" name="dineOut" id="input-dine">
+                <label>Alcohol</label>
+                <input type="text" name="alcohol" id="input-alcohol">
+                <label>Housing</label>
+                <input type="text" name="housing" id="input-housing">
+                <label>ApparelAndServices</label>
+                <input type="text" name="apparelAndServices" id="input-apparelAndServices">
+                <label>Transportation</label>
+                <input type="text" name="transportation" id="input-transportation">
+                <label>HealthCare</label>
+                <input type="text" name="healthCare" id="input-health">
+                <label>Entertainment</label>
+                <input type="text" name="entertainment" id="input-entertainment">
+                <label>PersonalCare</label>
+                <input type="text" name="personalCare" id="input-personalCare">
+                <label>Education</label>
+                <input type="text" name="education" id="input-education">
+                <label>Miscellaneous</label>
+                <input type="text" name="miscellaneous" id="input-miscellaneous">
+                <label>Donations</label>
+                <input type="text" name="donations" id="input-donations">
+                <label>Insurance</label>
+                <input type="text" name="insurance" id="input-insurance">
+                <br>
+                <input class="btn btn-success btn-block  text-white" type="button" value="Submit Budget" id="submit-btn">
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<footer class="sticky page-footer font-large green darken-1 ">
+    <div class="container text-center align-middle">
+        <br>
+        <div class="row text-center align-middle footerrow">
+            <div class="col-3 ">
+                <a href="./home.html">Dashboard</a>
+            </div>
+            <div class="col-3">
+                <a href="./compare.html">Compare</a>
+            </div>
+            <div class="col-3">
+                <a href="./newBudget.html">Create New Budget</a>
+            </div>
+            <div class="col-3 ">
+                <a href="./newUserInfo.html">Create New User</a>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="home.html"> Green Financial</a>
+        <p>For entertainment purposes only. </p>
+    </div>
+</footer>
 
 
 
@@ -48,15 +104,17 @@
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
+    </script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
+    </script>
+<script src="./js/new-budget.js"></script>
 
 </body>
 

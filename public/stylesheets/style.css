@@ -17,7 +17,11 @@
 
 }
 
-.row {
+#history {
+    padding-top: 50px;
+}
+
+#test {
     padding-top: 50px;
 }
 
@@ -27,4 +31,8 @@
 
 #compare {
     border-left: 50px;
+}
+
+p {
+    font-size: 10pt;
 }

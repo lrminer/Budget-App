@@ -20,22 +20,23 @@ $(document).ready(function () {
 
 
         const dataToSend = {
-            alcohol: alcohol,
-            grocery: grocery,
-            dineOut: dineOut,
-            housing: housing,
-            apparelAndServices: apparelAndServices,
-            transportation: transportation,
-            healthCare: healthCare,
+            Alcohol: alcohol,
+            Grocery: grocery,
+            Dine_Out: dineOut,
+            Housing: housing,
+            Apparel: apparelAndServices,
+            Transportation: transportation,
+            Health_care: healthCare,
             entertainment: entertainment,
-            personalCare: personalCare,
-            education: education,
-            miscellaneous: miscellaneous,
-            donations: donations,
-            insurance: insurance,
+            Personal_care: personalCare,
+            Education: education,
+            Miscallaneous: miscellaneous,
+            Donations: donations,
+            Insurance: insurance,
             
         };
 
+        console.log(dataToSend);
         $.post('/api/budgets', dataToSend, function () {
 
         }).then(function () {
