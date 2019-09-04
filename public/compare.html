@@ -15,13 +15,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Icons/favicon-32x32.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
-<nav class="navbar navbar-light bg-success">
-    <a href="" class="navbar-brand mb-0 h1 text-white">
-        <img src="./Assets/Icons/circled-g.png" alt="circled-g">Green
-    </a>
-</nav>
 
 <body>
+    <nav class="navbar navbar-light bg-success">
+        <a href="" class="navbar-brand mb-0 h1 text-white">
+            <img src="./Assets/Icons/circled-g.png" alt="circled-g">Green
+        </a>
+        <select name="user-list" id="user-list">
+            <option value="placeholder">Act on behalf of...</option>
+        </select>
+    </nav>
 
     <br>
     <br>
@@ -29,22 +32,22 @@
         <div class="row">
             <div class="col-3"></div>
             <div class="col-3">
-                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                <!-- <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Query
-                </button>
-                <select name="user-list" id="user-list">
-                    <option value="placeholder">placeholder</option>
-                </select>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item">Age</a>
-                    <a class="dropdown-item">Location</a>
-                </div>
+                </button> -->
+
+                
             </div>
             <div class="col-3">
                 <form class="form-inline">
                     <div class="form-group mx-md-3 mb-2">
-                        <input type="query" class="form-control " id="queryResponse">
+                        <input type="text" class="form-control" id="queryResponse">
+                        <select class="form-control" id="category-select">
+                                <option value="">Category</option>
+                                <option value="age">Age</option>
+                                <option value="location">Location</option>
+                            </select>
                         <button type="submit" class="btn btn-success mb-2">Submit</button>
                     </div>
                 </form>
@@ -69,19 +72,16 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col"></div>
-            <div class="col">
-                <table>
-                    <div id="chart_div"></div>
-                </table>
+            <div class="col" id="user_div">
+
+                <!-- <div id="user_div"></div> -->
+
             </div>
-            <div class="col"></div>
-            <div class="col">
-                <table>
-                    "BAR CHART"
-                </table>
+            <div class="col" id="chart_div">
+
+                <!-- <div id="chart_div"></div> -->
+
             </div>
-            <div class="col"></div>
         </div>
     </div>
 
@@ -106,6 +106,7 @@
     </script>
     <script src="./js/pieChart.js"> </script>
     <script src="./js/compare.js"></script>
+    <script src="./js/query.js"></script>
 
 
 

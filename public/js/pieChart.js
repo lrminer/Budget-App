@@ -27,6 +27,7 @@ $(window).on("load", function () {
         console.log(all_data);
         let avgData = all_data[1];
         console.log(avgData);
+        
         let grocery = parseInt(avgData.Grocery)
         let dine_out = parseInt(avgData.Dine_Out)
         let alcohol = parseInt(avgData.Alcohol)
@@ -47,14 +48,14 @@ $(window).on("load", function () {
         data.addColumn('number', '%');
         data.addRows([
             ['Grocery', grocery],
-            ['Dine_out', dine_out],
+            ['Dine Out', dine_out],
             ['Alcohol', alcohol],
             ['Housing', housing],
             ['Apparel', apparel],
             ['Transportation', transportation],
             ['Health', health],
             ['Entertainment', entertainment],
-            ['Personal_care', personal_care],
+            ['Personal Care', personal_care],
             ['Education', education],
             ['Miscellaneous', miscellaneous],
             ['Donations', donations],
@@ -63,9 +64,9 @@ $(window).on("load", function () {
 
         // Set chart options
         var options = {
-            'title': 'Spending budget',
-            'width': 600,
-            'height': 600
+            'title': 'Average Spending',
+            'width': 500,
+            'height': 500
         };
 
         // Instantiate and draw our chart, passing in some options.
