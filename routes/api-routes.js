@@ -21,48 +21,47 @@ module.exports = function (app) {
             }
         }).then(function (dbUsers) {
             res.json(dbUsers);
-            
+
         });
     });
+
     // To query by whatever has been selected
     // /api/budgets?location=GA&age=27
-    app.get("/api/budgets/", function (req, res) {
-        console.log(req.query);
-        db.Budget.findAll({
-            include: [{
-                model: db.User,
-                where: req.query
-            }]
-        }).then(budget => {
-            console.log(JSON.stringify(budget))
-            //   where: whereObj
-            // }).then(function(results) {
-            //   res.json(results);
-            // });
-            // res.end();
-        });
-    });
+    // app.get("/api/budgets/", function (req, res) {
+    //     console.log(req.query);
+    //     db.Budget.findAll({
+    //         include: [{
+    //             model: db.User,
+    //             where: req.query
+    //         }]
+    //     }).then(budget => {
+    //         console.log(JSON.stringify(budget))
+    //         //   where: whereObj
+    //         // }).then(function(results) {
+    //         //   res.json(results);
+    //         // });
+    //         // res.end();
+    //     });
+    // });
     // Used for looking at all budgets
 
-    // app.get('/api/budgets/', function (req, res) {
-
+    app.get('/api/budgets/', function (req, res) {
 
         db.Budget.findAll({}).then(function (dbBudgets) {
-            
+
             console.log(dbBudgets);
-            
+
             console.log(averageData(dbBudgets));
 
             res.json(averageData(dbBudgets));
         });
     });
 
-
     // Used for looking at all budgets for a particular user
     app.get('/api/budgets/category/user_id=:user_id', function (req, res) {
         db.Budget.findAll({
             where: {
-                user_id: req.params.user_id
+                id: req.params.user_id // needs to be changed to userid after reseed 
             }
         }).then(function (dbBudgets) {
             res.json(dbBudgets);
@@ -81,6 +80,8 @@ module.exports = function (app) {
             res.json(dbBudget);
         });
     });
+
+
     app.post('api/users', function (req, res) {
         db.User.create(req.body).then(function (dbUser) {
             res.json(dbUser);
