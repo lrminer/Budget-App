@@ -75,14 +75,14 @@ module.exports = function (app) {
         });
     });
 
-    app.post('api/budgets', function (req, res) {
+    app.post('/api/budgets', function (req, res) {
         db.Budget.create(req.body).then(function (dbBudget) {
             res.json(dbBudget);
         });
     });
 
 
-    app.post('api/users', function (req, res) {
+    app.post('/api/users', function (req, res) {
         db.User.create(req.body).then(function (dbUser) {
             res.json(dbUser);
         });
