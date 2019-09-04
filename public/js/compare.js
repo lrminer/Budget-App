@@ -5,17 +5,19 @@ $(document).ready(function () {
     }).then(function (data) {
         console.log(data); // we will use this data to make a dropdown list
 
-        const select = $('<select>');
+
+        const select = $('#user-list');
         // this is pseudocode below btw 
         for (i = 0; i < data.length; i++) {
-            const firstname = data[i].firstname;/// check this property name
-            const lastname = data[i].lastname; /// check this property name
-            const id = data[i].user_id; /// check this property name
+            const firstname = data[i].firstName;/// check this property name
+            const lastname = data[i].lastName; /// check this property name
+            const id = data[i].id; /// check this property name
 
-            const option = $('<option>').text(firstname + " " + lastname).attr('value',id);
+            const option = $('<option>').text(firstname + " " + lastname).attr('value', id);
 
             select.append(option);
         }
+
 
     });
 
@@ -37,7 +39,7 @@ $(document).ready(function () {
         $.get({
             url: '/api/users/' +  selectedUser
         }).then(function (data) {
-            
+
         });
     });
 
