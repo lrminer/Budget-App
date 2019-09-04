@@ -37,9 +37,9 @@ $(document).ready(function () {
         console.log(selectedUser); //console.log user id to make sure
 
         $.get({
-            url: '/api/users/' +  selectedUser
+            url: '/api/budgets/category/user_id=' +  selectedUser
         }).then(function (data) {
-
+            console.log(data);
         });
     });
 

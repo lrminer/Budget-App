@@ -57,12 +57,11 @@ module.exports = function (app) {
         });
     });
 
-
     // Used for looking at all budgets for a particular user
     app.get('/api/budgets/category/user_id=:user_id', function (req, res) {
         db.Budget.findAll({
             where: {
-                user_id: req.params.user_id
+                id: req.params.user_id // needs to be changed to userid after reseed 
             }
         }).then(function (dbBudgets) {
             res.json(dbBudgets);
@@ -82,7 +81,7 @@ module.exports = function (app) {
         });
     });
 
-    
+
     app.post('api/users', function (req, res) {
         db.User.create(req.body).then(function (dbUser) {
             res.json(dbUser);
