@@ -27,7 +27,9 @@ module.exports = function (app) {
 
     // To query by whatever has been selected
     // /api/budgets?location=GA&age=27
+
     app.get("/api/budgets", function (req, res) {
+
         console.log(req.query);
         db.Budget.findAll({
             include: [{
