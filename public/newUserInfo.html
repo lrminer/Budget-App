@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Green</title>
@@ -11,29 +13,71 @@
 </head>
 
 <nav class="navbar navbar-light bg-success">
-    <a href="" class="navbar-brand mb-0 h1 text-white">
+    <a href="./home.html" class="navbar-brand mb-0 h1 text-white">
         <img src="./Assets/Icons/circled-g.png" alt="circled-g">Green
     </a>
 </nav>
 <br>
+<div class="container-float">
+        <div class="row" id= newUser>
+            <div class="col">
+                <div class="table text-white">
+                    <thead>
+                        <th>
+                            <h2>New User</h2>
+                        </th>
+                    </thead>
+                </div>
+            </div>
+        </div>
+    </div>
 <br>
 <div class="container">
     <div class="row">
         <div class="col">
             <form method="POST" id="create-new-user-form" action="/api/users">
-                <h2>Create New User</h2>
                 <input type="text" class="form-control" placeholder="Username" name="username" id="input-username">
+                <br>
                 <input type="text" class="form-control" placeholder="Password" name="password" id="input-password">
+                <br>
                 <input type="text" class="form-control" placeholder="Age" name="age" id="input-age">
+                <br>
                 <input type="text" class="form-control" placeholder="Location" name="location" id="input-location">
+                <br>
                 <input type="text" class="form-control" placeholder="Income" name="income" id="input-income">
-                <input type="button" value="Create my user" id="submit-btn">
+                <br>
+                <input class="btn btn-success btn-block  text-white" type="button" value="Create my user" id="submit-btn">
             </form>
 
         </div>
     </div>
 </div>
-
+br
+<footer class="sticky page-footer font-large green darken-1 ">
+        <div class="container text-center align-middle">
+            <br>
+            <div class="row text-center align-middle footerrow">
+                <div class="col-3 ">
+                    <a href="./home.html">Dashboard</a>
+                </div>
+                <div class="col-3">
+                    <a href="./compare.html">Compare</a>
+                </div>
+                <div class="col-3">
+                    <a href="./newBudget.html">Create New Budget</a>
+                </div>
+                <div class="col-3 ">
+                    <a href="./newUserInfo.html">Create New User</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="home.html"> Green Financial</a>
+            <p>For entertainment purposes only. </p>
+        </div>
+    </footer>
 
 
 <script
