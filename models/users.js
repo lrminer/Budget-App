@@ -1,5 +1,5 @@
 'use strict';
-const db = require('.');
+const db = require('../models');
 
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
