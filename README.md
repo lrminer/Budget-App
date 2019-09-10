@@ -25,7 +25,7 @@ The application allows users to compare their budgets side by side to the averag
 
 ## Design
 * Bootstrap (https://getbootstrap.com/)
-* MDBootstrap (https://getbootstrap.com/)
+* MDBootstrap (https://mdbootstrap.com/)
 * Google Charts (https://developers.google.com/chart/)
 
 
