@@ -1,10 +1,12 @@
 # Budget-App
 
+<https://green-financial.herokuapp.com/>
+
 ## Contributors
-* Kevin Abram (https://github.com/htwnkid)
-* Chika Achukwu (https://github.com/catherinechika)
-* Brett Scottini (https://github.com/bscottini1)
-* Logan Miner (https://github.com/lrminer)
+* Kevin Abram <https://github.com/htwnkid>
+* Chika Achukwu <https://github.com/catherinechika>
+* Brett Scottini <https://github.com/bscottini1>
+* Logan Miner <https://github.com/lrminer>
 
 ## Project Requirements
 * Node and Express Web Server
@@ -24,8 +26,8 @@ Asking others how they spend their money can be uncomfortable. This application 
 The application allows users to compare their budgets side by side to the average of all the responses for any given query.
 
 ## Design
-* Bootstrap (https://getbootstrap.com/)
-* MDBootstrap (https://mdbootstrap.com/)
-* Google Charts (https://developers.google.com/chart/)
+* Bootstrap <https://getbootstrap.com/>
+* MDBootstrap <https://mdbootstrap.com/>
+* Google Charts <https://developers.google.com/chart/>
 
 
