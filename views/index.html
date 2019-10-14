@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-
-</head>
-
-<body>
-
-
+  <body>
     <div class="container">
-
-        <div class="row">
-
-            <div id="indexPage-header">Budget App</div>
-
-        </div>
-
+      <div class="row">
+        <div id="indexPage-header">Budget App</div>
+      </div>
     </div>
 
     <div class="container">
+      <div class="row">
+        <button
+          id="createNewUser-button"
+          type="button"
+          class="btn btn-primary btn-lg btn-block"
+        >
+          Create New User
+        </button>
+      </div>
 
-        <div class="row">
-
-            <button id="createNewUser-button" type="button" class="btn btn-primary btn-lg btn-block">Create New
-                User</button>
-
-        </div>
-
-        <div class="row">
-
-            <button id="login-button" type="button" class="btn btn-secondary btn-lg btn-block">Login</button>
-
-        </div>
-
-
-
+      <div class="row">
+        <button
+          id="login-button"
+          type="button"
+          class="btn btn-secondary btn-lg btn-block"
+        >
+          Login
+        </button>
+      </div>
     </div>
 
+    <div id="login-form">
+        
+    </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
+    <script src="./js/login.js"></script>
+  </body>
 </html>

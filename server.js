@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
+const server = require('http').Server(app);
 const PORT = process.env.PORT || 4000;
 const session = express("express-session");
 const passport = require("passport");
@@ -14,17 +15,18 @@ app.use(
     extended: true
   })
 );
+
 app.use(express.json());
 
-console.log(process.env.SESSIONKEY)
+// console.log(process.env.SESSIONKEY)
 
-const sessionMW = session({
-  secret: process.env.SESSIONKEY,
-  resave: false,
-  saveUninitialized: true
-});
+// const sessionMW = session({
+//   secret: process.env.SESSIONKEY,
+//   resave: false,
+//   saveUninitialized: true
+// });
 
-app.use(sessionMW);
+// app.use(sessionMW);
 app.use(passport.initialize());
 const passportSession = passport.session();
 app.use(passportSession);
