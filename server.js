@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const session = express("express-session");
 const passport = require("passport");
 const bcrypt = require("bcrypt");
@@ -15,6 +15,8 @@ app.use(
   })
 );
 app.use(express.json());
+
+console.log(process.env.SESSIONKEY)
 
 const sessionMW = session({
   secret: process.env.SESSIONKEY,

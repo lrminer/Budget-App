@@ -5,8 +5,6 @@ const averageData = require('../public/js/averagingData');
 module.exports = function (app) {
     // Used for looking at all users
 
-
-
     app.get('/api/users', function (req, res) {
         db.User.findAll({}).then(function (dbUsers) {
             res.json(dbUsers);
