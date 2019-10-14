@@ -1,15 +1,10 @@
 const db = require('../models');
 
-module.exports = function (app) {
-    
+module.exports = function (app, db, passport) {
     app.post('/login', function(req, res) {
         db.User.findAll
     })
-
-
-
-
-
+    
     // Used for looking at all users
     app.get('/api/users', function (req, res) {
 
